@@ -8,5 +8,5 @@ String ZwaveNode01HomeID    "Home ID [%s]" (gZwaveNode01) {zwave="1:command=info
 Number ZwaveNode01NetworkID "Node ID [%s]" (gZwaveNode01) {zwave="1:command=info,item=node_id"}
 
 
-Switch PatioWallLight {zwave="4:command=SWITCH_BINARY", refresh_interval=5}
-Dimmer MasterBathLights {zwave="5:command=SWITCH_MULTILEVEL", restore_last_value=true, refresh_interval=5}
+Switch PatioWallLight {zwave="4:command=SWITCH_BINARY"}
+Dimmer MasterBathLights {zwave="5:command=SWITCH_MULTILEVEL, restore_last_value=true, refresh_interval=5"}

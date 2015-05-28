@@ -1,20 +1,23 @@
+import org.openhab.core.library.types.*
+import java.util.Date
+
 rule "Bathroom Lights - 75% at 8"
 when
     Time cron "0 0 20 * * ?"
 then
-    sendCommand(MasterBathLights, 30)
+    sendCommand(MasterBathLights, 25)
 end
 
 rule "Bathroom Lights - 50% at 9"
 when
     Time cron "0 0 21 * * ?"
 then
-    sendCommand(MasterBathLights, 20)
+    sendCommand(MasterBathLights, 13)
 end
 
 rule "Bathroom Lights - 25% at 10"
 when
     Time cron "0 0 22 * * ?"
 then
-    sendCommand(MasterBathLights, 10)
+    sendCommand(MasterBathLights, 7)
 end
