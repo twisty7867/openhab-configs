@@ -62,5 +62,6 @@ sitemap default label="Hoover Haven 3.0"
 	Frame label="Info" {
 		Text item=Sunrise_Time
 		Text item=Sunset_Time
+		Switch label="Update Configuration" item=Github_Pull_Configs
 	}
 }

@@ -2,3 +2,4 @@ DateTime Sunrise_Time  			"Sunrise [%1$tH:%1$tM]"  {astro="planet=sun, type=rise
 DateTime Sunset_Time  			"Sunset [%1$tH:%1$tM]"  {astro="planet=sun, type=set, property=end"}
 Switch Sunset_Event    			{astro="planet=sun, type=set, property=end"}
 Switch update_greent 			{ exec="ON:java -jar ./webapps/greent/updater.jar"}
+Switch Github_Pull_Configs 		{ exec="ON:/usr/share/openhab/git-pull-configs.sh" }
