@@ -1,0 +1,12 @@
+Number ZwaveStatsSOF "Number Start of Frames[%s]" (gZwaveStats) {zwave="1:command=info,item=sof"}
+Number ZwaveStatsACK "Number of Acknowledgments [%s]" (gZwaveStats) {zwave="1:command=info,item=ack"}
+Number ZwaveStatsCAN "Number of CAN [%s]" (gZwaveStats) {zwave="1:command=info,item=can"}
+Number ZwaveStatsNAK "Number of NAK [%s]" (gZwaveStats) {zwave="1:command=info,item=nak"}
+Number ZwaveStatsOOF "Number of OOF [%s]" (gZwaveStats) {zwave="1:command=info,item=oof"}
+Number ZwaveStatsTimeout "Number of Time-outs [%s]" (gZwaveStats) {zwave="1:command=info,item=time_out"}
+String ZwaveNode01HomeID    "Home ID [%s]" (gZwaveNode01) {zwave="1:command=info,item=home_id"}
+Number ZwaveNode01NetworkID "Node ID [%s]" (gZwaveNode01) {zwave="1:command=info,item=node_id"}
+
+
+Switch PatioWallLight {zwave="4:command=SWITCH_BINARY", refresh_interval=5}
+Dimmer MasterBathLights {zwave="5:command=SWITCH_MULTILEVEL", restore_last_value=true, refresh_interval=5}

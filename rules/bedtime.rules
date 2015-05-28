@@ -1,0 +1,20 @@
+rule "Bathroom Lights - 75% at 8"
+when
+    Time cron "0 0 20 * * ?"
+then
+    sendCommand(MasterBathLights, 30)
+end
+
+rule "Bathroom Lights - 50% at 9"
+when
+    Time cron "0 0 21 * * ?"
+then
+    sendCommand(MasterBathLights, 20)
+end
+
+rule "Bathroom Lights - 25% at 10"
+when
+    Time cron "0 0 22 * * ?"
+then
+    sendCommand(MasterBathLights, 10)
+end

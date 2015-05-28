@@ -1,0 +1,27 @@
+rule "Reading Lights - On At Sunset"
+when
+    Item Sunset_Event received update ON
+then
+    sendCommand(ArdenReadingLights, ON)
+end
+
+rule "Reading Lights - Off at 10:30pm"
+when
+    Time cron "0 30 22 * * ?"
+then
+    sendCommand(ArdenReadingLights, OFF)
+end
+
+rule "Reading Lights - On at 7:20am weekdays"
+when
+    Time cron "0 20 7 ? * MON-FRI"
+then
+    sendCommand(ArdenReadingLights, ON)
+end
+
+rule "Overhead Lights - On at 7:25am weekdays"
+when
+    Time cron "0 25 7 ? * MON-FRI"
+then
+    sendCommand(ArdenOverheadLights, ON)
+end

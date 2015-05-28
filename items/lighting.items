@@ -1,0 +1,2 @@
+Switch ArdenOverheadLights    	{wemo="Arden Lights"}   
+Switch ArdenReadingLights     	{wemo="Arden reading lights"}

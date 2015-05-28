@@ -1,0 +1,66 @@
+sitemap default label="Hoover Haven 3.0"
+{
+	Frame label="Lighting" {
+		Text label="Upper Level" icon="firstfloor" {
+			Frame label="India's Room" {
+				Text label="coming soon!" icon="present"
+			}
+			Frame label="Hallway" {
+				Text label="coming soon!" icon="present"
+			}
+			Frame label="Bathroom" {
+				Switch label="Lights" item=MasterBathLights 
+				Slider label="Light Level" item=MasterBathLights
+			}
+			Frame label="Laundry Room" {
+				Text label="coming soon!" icon="present"
+			}
+			Frame label="Master Bedroom" {
+				Text label="coming soon!" icon="present"
+			}
+		}
+
+		Text label="Main Level" icon="groundfloor" {
+			Frame label="Kitchen" {
+				Switch label="MiLight - Bar" item=Milight1 
+				Slider label="MiLight - Bar  - Brightness" item=Milight1Brightness switchSupport
+				Slider label="MiLight - Bar  - Color Temp" item=Milight1Temp switchSupport
+			}
+			Frame label="Bathroom" {
+				Text label="coming soon!" icon="present"
+			}
+			Frame label="Dining Room" {
+				Text label="coming soon!" icon="present"
+			}
+			Frame label="Living Room" {
+				Text label="coming soon!" icon="present"
+			}
+			Frame label="Patio" {
+				Switch label="Patio Wall Light" item=PatioWallLight 
+			}
+		}
+
+		Text label="Lower Level" icon="cellar" {
+			Frame label="Arden's Room" {
+				Switch label="Overhead Lights" item=ArdenOverheadLights 
+				Switch label="Reading Lights" item=ArdenReadingLights 
+			}
+		}
+	}
+
+	Frame label="Climate Control" {
+		Text item=NestTStatDownstairs_ambient_temperature_f visibility=[NestTStatDownstairs_temperature_scale=="F"]
+		Text item=NestTStatDownstairs_humidity
+		Switch item=NestTStatDownstairs_hvac_mode mappings=[heat="Heat",cool="Cool","heat-cool"="Auto",off="Off"]
+		Setpoint item=NestTStatDownstairs_target_temperature_f label="Target Temperature [%.1f °F]" minValue="45" maxValue="85" step="1" visibility=[NestTStatDownstairs_hvac_mode=="heat",NestTStatDownstairs_hvac_mode=="cool",NestTStatDownstairs_hvac_mode=="off"]
+		Setpoint item=NestTStatDownstairs_target_temperature_low_f label="Minimum Temperature [%.1f °F]" minValue="50" maxValue="80" step="1" visibility=[NestTStatDownstairs_hvac_mode=="heat-cool"]
+		Setpoint item=NestTStatDownstairs_target_temperature_high_f label="Maximum Temperature [%.1f °F]" minValue="50" maxValue="80" step="1" visibility=[NestTStatDownstairs_hvac_mode=="heat-cool"]
+		Text item=NestTStatDownstairs_last_connection
+	}
+
+
+	Frame label="Info" {
+		Text item=Sunrise_Time
+		Text item=Sunset_Time
+	}
+}

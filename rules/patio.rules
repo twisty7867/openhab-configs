@@ -1,0 +1,13 @@
+rule "Patio Illumination - On At Sunset"
+when
+    Item Sunset_Event received update ON
+then
+    sendCommand(PatioWallLight, ON)
+end
+
+rule "Patio Illumination - Off At Midnight"
+when
+    Time is midnight
+then
+    sendCommand(PatioWallLight, OFF)
+end
