@@ -45,6 +45,9 @@ sitemap default label="Hoover Haven 3.0"
 				Switch label="Overhead Lights" item=ArdenOverheadLights 
 				Switch label="Reading Lights" item=ArdenReadingLights 
 			}
+			Frame label="Garage" {
+				Switch label="Garage Door Sensor" item=GarageDoorSensor
+			}
 		}
 	}
 

@@ -1,0 +1,6 @@
+rule "Reset Config Switch"
+when
+    Item Github_Pull_Configs received update ON
+then
+    sendCommand(Github_Pull_Configs, OFF)
+end

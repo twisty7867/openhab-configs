@@ -10,3 +10,4 @@ Number ZwaveNode01NetworkID "Node ID [%s]" (gZwaveNode01) {zwave="1:command=info
 
 Switch PatioWallLight {zwave="4:command=SWITCH_BINARY"}
 Dimmer MasterBathLights {zwave="5:command=SWITCH_MULTILEVEL, restore_last_value=true, refresh_interval=5"}
+Switch GarageDoorSensor {zwave="6:command=SENSOR_BINARY, respond_to_basic=true"}
