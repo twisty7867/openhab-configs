@@ -22,9 +22,7 @@ sitemap default label="Hoover Haven 3.0"
 
 		Text label="Main Level" icon="groundfloor" {
 			Frame label="Kitchen" {
-				Switch label="MiLight - Bar" item=Milight1 
-				Slider label="MiLight - Bar  - Brightness" item=Milight1Brightness switchSupport
-				Slider label="MiLight - Bar  - Color Temp" item=Milight1Temp switchSupport
+				Text label="coming soon!" icon="present"
 			}
 			Frame label="Bathroom" {
 				Text label="coming soon!" icon="present"

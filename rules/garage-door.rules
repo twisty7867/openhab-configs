@@ -1,0 +1,13 @@
+rule "Garage Door Opens"
+when
+    Item GarageDoorSensor received update ON
+then
+    pushNotification("Garage Door", "The garage door at home just opened.")
+end
+
+rule "Garage Door Closes"
+when
+    Item GarageDoorSensor received update OFF
+then
+    pushNotification("Garage Door", "The garage door at home just closed.")
+end
