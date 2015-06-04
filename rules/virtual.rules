@@ -4,3 +4,10 @@ when
 then
     sendCommand(Github_Pull_Configs, OFF)
 end
+
+rule "Test Push"
+when
+    Time cron "*/5 * * * * ?"
+then
+    pushNotification("Testing", "The testing!")
+end
