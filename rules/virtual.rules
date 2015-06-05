@@ -9,5 +9,5 @@ rule "Test Push"
 when
     Time cron "0 0/2 * * * ?"
 then
-    pushNotification("e73f9e2b9db07b77ede1881e3b3194cf7d6733fe","Testing", "The testing!", 0)
+    pushNotification("Testing", "The testing!")
 end
