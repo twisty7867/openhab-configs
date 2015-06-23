@@ -1,0 +1,13 @@
+rule "Reading Lights - On At Sunset"
+when
+    Item Sunset_Event received update ON
+then
+    sendCommand(IndiaReadingLights, ON)
+end
+
+rule "Reading Lights - Off at 10:30pm"
+when
+    Time cron "0 30 22 * * ?"
+then
+    sendCommand(IndiaReadingLights, OFF)
+end

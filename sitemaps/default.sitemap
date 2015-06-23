@@ -3,7 +3,7 @@ sitemap default label="Hoover Haven 3.0"
 	Frame label="Lighting" {
 		Text label="Upper Level" icon="firstfloor" {
 			Frame label="India's Room" {
-				Text label="coming soon!" icon="present"
+				Switch label="Reading Lights" item=IndiaReadingLights 
 			}
 			Frame label="Hallway" {
 				Text label="coming soon!" icon="present"
@@ -50,7 +50,7 @@ sitemap default label="Hoover Haven 3.0"
 	}
 
 	Frame label="Climate Control" {
-		Text item=NestTStatDownstairs_ambient_temperature_f visibility=[NestTStatDownstairs_temperature_scale=="F"]
+		Text item=NestTStatDownstairs_ambient_temperature_f 
 		Text item=NestTStatDownstairs_humidity
 		Switch item=NestTStatDownstairs_hvac_mode mappings=[heat="Heat",cool="Cool","heat-cool"="Auto",off="Off"]
 		Setpoint item=NestTStatDownstairs_target_temperature_f label="Target Temperature [%.1f °F]" minValue="45" maxValue="85" step="1" visibility=[NestTStatDownstairs_hvac_mode=="heat",NestTStatDownstairs_hvac_mode=="cool",NestTStatDownstairs_hvac_mode=="off"]

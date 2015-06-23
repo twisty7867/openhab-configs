@@ -1,3 +1,5 @@
-Switch Milight1    			{milight="MLBridge1;1"}                  
-Dimmer Milight1Brightness   {milight="MLBridge1;1;brightness"}       
-Dimmer Milight1Temp    		{milight="MLBridge1;1;colorTemperature"} 
+Switch Milight1    				{milight="MLBridge1;1"}                  
+Dimmer Milight1Brightness   	{milight="MLBridge1;1;brightness"}       
+Dimmer Milight1Temp    			{milight="MLBridge1;1;colorTemperature"} 
+Switch IndiaReadingLights    	{milight="MLBridge1:2"}
+Dimmer IndiaReadingBrightness   {milight="MLBridge1;2;brightness"}       
