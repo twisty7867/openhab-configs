@@ -3,6 +3,7 @@ when
     Item GarageDoorSensor received update ON
 then
     pushNotification("Garage Door", "The garage door at home just opened.")
+    sendMail("nathan@foo-o-rama.com", "Garage Door", "The garage door at home just opened.")
 end
 
 rule "Garage Door Closes"
@@ -10,4 +11,5 @@ when
     Item GarageDoorSensor received update OFF
 then
     pushNotification("Garage Door", "The garage door at home just closed.")
+    sendMail("nathan@foo-o-rama.com", "Garage Door", "The garage door at home just closed.")
 end

@@ -11,17 +11,3 @@ when
 then
     sendCommand(ArdenReadingLights, OFF)
 end
-
-rule "Reading Lights - On at 7:20am weekdays"
-when
-    Time cron "0 20 7 ? * MON-FRI"
-then
-    sendCommand(ArdenReadingLights, ON)
-end
-
-rule "Overhead Lights - On at 7:25am weekdays"
-when
-    Time cron "0 25 7 ? * MON-FRI"
-then
-    sendCommand(ArdenOverheadLights, ON)
-end
